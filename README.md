@@ -1,12 +1,13 @@
 # Machine-Learning
 Just for fun  : )
 
-#Recommendation
-##Recommendation system data set
+# Recommendation
+
+## Recommendation system data set
 
 movielens： http://files.grouplens.org/datasets/movielens/
 
-##Lib
+## Lib
 
 sklearn
 
@@ -16,7 +17,7 @@ tensorflow
 
 ...
 
-##algorithm
+## algorithm
 
 SVD,NMF,ALS
 
