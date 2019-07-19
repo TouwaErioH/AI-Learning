@@ -42,16 +42,22 @@ def PrepareData(sc):
 
 #没有做去重工作，即已经打过分的电影不推荐 （不清楚recommendProducts是否自动去重，可以阅读源码/官方文档分析一下）
 def RecommendUsers(model,movieTitle,inputname,inputcount):
+    i=0
+    lisa=['0','0','0','0','0','0','0','0','0']
+    rat=[0,0,0,0,0,0,0,0,0]
     RecommendUser = model.recommendProducts(inputname,inputcount)
-    print("对ID为"+str(inputname)+"的用户推荐下列"+str(inputcount)+"个电影：")
     for p in RecommendUser:
         mark=str(p[2])
         mark=float(p[2])
         if mark>5:
             mark=5.000123
-        print("对编号为" + str(p[0]) + "的用户" + "推荐电影" + str(movieTitle[p[1]]) + "\n")
-        print("推荐评分为 %.1f \n"  % mark)
-    #sc.stop()  #退出已有SparkContext
+        namemovie=str(movieTitle[p[1]])[:-7]
+        lisa[i]=namemovie
+        mark=mark*2
+        rat[i]=round(mark,2)
+        i=i+1
+        lisf=[lisa,rat]	
+    return lisf
 
 def RecommendMovies(model,movieTitle,inputname,inputcount):
     RecommendUser = model.recommendUsers(inputname,inputcount)
@@ -67,10 +73,23 @@ def RecommendMovies(model,movieTitle,inputname,inputcount):
 
 
 if __name__ == "__main__":
+    userreal=input("input userid:")
+    userreal=int(userreal)
+    moviecount=9
+    sc=CreateSparkContext()
+    print("==========数据准备==========")
+    movieTitle = PrepareData(sc)
+    print("==========载入模型==========")
+    model = loadModel(sc)
+    print("==========进行推荐==========")
+    #Recommend(model)
+    lis=RecommendUUUsers(model, movieTitle, userreal,moviecount)
+    print(lis)
+    sc.stop()  #退出已有SparkContext
+    
     '''
     print("请输入2个参数, 第一个参数指定推荐模式（用户/电影）, 第二个参数为推荐的数量如U666 10表示向用户666推荐10部电影")
     input = ["U666",'5']
-    '''
     print("请输入2个参数, 第一个参数指定推荐用户, 第二个参数为推荐的数量.如666 10表示向用户666推荐10部电影")
     sc.stop()
     #input = ["666",'5']
@@ -86,7 +105,7 @@ if __name__ == "__main__":
     print("==========进行推荐==========")
     #Recommend(model)
     RecommendUsers(model, movieTitle, userreal,moviecount)
-    
+    '''
     
     userreal=123
     moviecount=5
