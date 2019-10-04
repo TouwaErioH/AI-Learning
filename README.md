@@ -36,3 +36,4 @@ ALS2文件夹包含测试代码，用于选择合适的参数：
 
 ## Histogram retrieval
 
+## using sift and opencv to stich img
