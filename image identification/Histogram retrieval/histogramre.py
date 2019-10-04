@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+fu# -*- coding: utf-8 -*-
 """
 Created on Fri Sep 20 10:20:25 2019
 
@@ -86,7 +86,7 @@ def calcdis(sta,end,mark,bins):
         temp1=histc-histf1
         temp1=np.power(temp1,2)
         tempdis1=np.sum(temp1)
-        #print(tempdis1)
+        #print(type(tempdis1)
         re=1
         temp=tempdis1
         
