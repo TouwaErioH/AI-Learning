@@ -34,6 +34,8 @@ ALS2文件夹包含测试代码，用于选择合适的参数：
 
 # image identification
 
+## basic opencv2 skills
+
 ## Histogram retrieval
 
-## using sift and opencv to stich img
+## using sift, lowes's ratio, RANSAC and opencv2 to stitch img
