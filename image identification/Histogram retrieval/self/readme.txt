@@ -1,0 +1,1 @@
+一开始不知道compareHist，就在计算了直方图后手动计算欧几里得距离，intersection distance，quadratic cross distance等等。。。

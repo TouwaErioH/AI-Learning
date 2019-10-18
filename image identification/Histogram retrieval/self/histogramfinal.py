@@ -73,7 +73,7 @@ def search(imggroup,gsize,hisstart,hisend):
             temp=np.power(temp,2)
             tempdis=np.sum(temp)
             cnt.append(tempdis)
-        tpp=np.argsort(cnt)
+        tpp=np.argsort(cnt)#用于给数组排序，返回值为从小到大元素index的值.假设一个数组a为[0,1,2,20,67,3],使用numpy.argsort(a),返回值应为[0,1,2,5,3,4]
         final=tpp[0]                               #img i 距离final组最近，认为属于final组
         #if 100<i&i<150:
         #   print(tpp[0])
