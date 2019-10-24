@@ -9,22 +9,21 @@ Created on Thu Oct 17 16:01:42 2019
 直接根据其颜色直方图在9908(0-9907)幅图片中按照最邻近方法找出最接近的图片(若超出100幅取最接近的100幅。若不足100幅则不足)
 计算查全率查准率
 并展示最接近的五福图片
-0-99 butterfly 100  mark 1,第一组图片
-100-199 mountain 100 mark 2
-700-799 luori 100  mark 3
-800-899 花  mark6
-300-399 mark9 
-1106-1205 mark 10
-8641 8740 mark8
-9029 9128 mark 7
-899-998 tree  100 mark 4
-1593-1692 saiche 100 mark 5
-
+0-99 butterfly 100  mark 1,第一组图片,选取19.bmp为模板
+100-199 mountain 100 mark 2 125.bmp
+300-399 mark3   376.bmp
+700-799 luori 100  mark 4  747.bmp
+800-899 花  mark5  850.bmp
+899-998 tree  100 mark 6  940.bmp
+1106-1205 mark 7 1177.bmp
+1593-1692  mark 8 1596.bmp
+8641 8740 mark 9  8655.bmp
+9029 9128 mark 10  9037.bmp
 '''
 
 import cv2
 import numpy as np
-import time
+
 
 #转bmp
 def jpg2bmp():
@@ -60,10 +59,14 @@ def calcRGBhisto(start,end,bins):
     return histor
 
 
-#imggroup为记录搜索数据的array。形如[[50,0,99],[150,100,199]] 意味第一组图片范围为0-99，选取50号图片为标准搜索
+#imggroup为记录搜索数据的array。形如[[19,0,99],[125,100,199]] 意味第一组图片范围为0-99，选取19号图片为标准搜索
 #hisstart,hisend为要做检索的图片范围，如0,9907
 #method为采用的检索方式。如Euclid为根据图片的直方图的欧几里得距离，越短认为越接近
 def search(imggroup,gsize,hisstart,hisend,method): #method记录判定方式，如Euclid;
+    rgbeqpre=0   #平均查全率查准率
+    hsveqrecall=0
+    rgbeqrecall=0
+    hsveqpre=0
     if (method=="Euclid"):
         calmethod="Euclid"
     elif (method=="Correlation"):
@@ -74,7 +77,7 @@ def search(imggroup,gsize,hisstart,hisend,method): #method记录判定方式，�
         calmethod=cv2.HISTCMP_BHATTACHARYYA
     rgbdis=[]                #rgbdis记录认为属于某组的图片的距离该组标准的距离;如dis[1]记录所有认为属于第二组的图片的距离该组标准150.bmp的距离
     hsvdis=[]
-    rgbresult=[]    #rgbresult记录结果,为gsize维数组。从0开始index越小越接近标准。如rgbresult[0]数组记录判定为属于1组的图片index。如rgbresult[0][0]=50，即为50.bmp
+    rgbresult=[]    #rgbresult记录结果,为gsize维数组。从0开始index越小越接近标准。如rgbresult[0]数组记录判定为属于1组的图片index。如rgbresult[0][0]=19，即为19.bmp
     hsvresult=[]
     rgbindex=[]     #rgbindex[0]数组记录判定为属于1组的图片index。
     hsvindex=[]
@@ -83,12 +86,12 @@ def search(imggroup,gsize,hisstart,hisend,method): #method记录判定方式，�
         hsvdis.append([])
         rgbindex.append([])
         hsvindex.append([])
-    ghisrgb=[] #选取为标准的图片的histogram数组。1维数组。如ghisrgb[0]为50.bmp的histogram
+    ghisrgb=[] #选取为标准的图片的histogram数组。1维数组。如ghisrgb[0]为19.bmp的histogram
     ghishsv=[]
     gstart=[] #记录每组开始图片index
     gend=[]
     for i in range(0,gsize):         #ghisrgb,ghishsv 记录各个选取图片的histogram gstart记录图片所属组的开始index，
-        ghisrgb.append(historgb[imggroup[i][0]]) #如第一组0-99，查找50.bmp，gstart[0]=0，gend[0]=99，ghisrgb[0]=histo[50]
+        ghisrgb.append(historgb[imggroup[i][0]]) #如第一组0-99，查找19.bmp，gstart[0]=0，gend[0]=99，ghisrgb[0]=histo[19]
         ghishsv.append(histohsv[imggroup[i][0]])
         gstart.append(imggroup[i][1])
         gend.append(imggroup[i][2])
@@ -170,9 +173,13 @@ def search(imggroup,gsize,hisstart,hisend,method): #method记录判定方式，�
             rgbclose.append(rgbindex[i][rgbresult[i][k]])
             hsvclose.append(hsvindex[i][hsvresult[i][k]])
         rgbpre=rgbcorr/(rgbsize)
+        rgbeqpre=rgbeqpre+rgbpre
         rgbrecall=rgbcorr/100
+        rgbeqrecall=rgbeqrecall+rgbrecall
         hsvpre=hsvcorr/(hsvsize)
+        hsveqpre=hsveqpre+hsvpre
         hsvrecall=hsvcorr/100
+        hsveqrecall=hsveqrecall+hsvrecall
         print("imgnumber %d\n"%(imggroup[i][0]))
         print("using rgb histogram %s method 's precision:%.5f ,recall:%.5f\n"%(method,rgbpre,rgbrecall))
         print("using hsv histogram %s method 's precision:%.5f ,recall:%.5f\n"%(method,hsvpre,hsvrecall))
@@ -180,24 +187,25 @@ def search(imggroup,gsize,hisstart,hisend,method): #method记录判定方式，�
         print(rgbclose)
         print("hsv close 5\n")
         print(hsvclose)
+    print("rgbeqpre: %.5f,rgbeqrecall: %.5f,hsveqpre: %.5f,hsveqrecall: %.5f\n"%(rgbeqpre/gsize,rgbeqrecall/gsize,hsveqpre/gsize,hsveqrecall/gsize))
         
 
 if __name__ == '__main__': 
     #jpg2bmp()
-    #histo=calcRGBhisto(0,9907,32)
     histostart = 0
-    histoend = 500
+    histoend = 9907
     histobins=32
-    h= 30  #180
-    s= 128  #256
+    h= 90#180
+    s= 256  #256
     historgb = calcRGBhisto(histostart,histoend,histobins)
     histohsv = calchsv(histostart,histoend,h,s)
-    #每组中选取一幅图片，查找最近的100张，计算查全率查准率。如第一组0-99，查50.bmp
-    #group=[[50,0,99],[150,100,199],[350,300,399],[750,700,799],[850,800,899],[950,899,998],
-    #           [1150,1106,1205],[8700,8641,8740],[9050,9029,9128],[1650,1593,1692]]
-    group=[[50,0,99],[137,100,199],[350,300,399]]
-    groupsize = 3
-    search(group,groupsize,histostart,histoend,"Euclid")
+    print(type(histohsv))
+    #每组中选取一幅图片，查找最近的100张，计算查全率查准率。如第一组0-99，查19.bmp
+    group=[[19,0,99],[125,100,199],[376,300,399],[747,700,799],[850,800,899],[940,899,998],
+               [1177,1106,1205],[1596,1593,1692],[8655,8641,8740],[9037,9029,9128]]
+    #group=[[50,0,99],[137,100,199],[350,300,399]]
+    groupsize = 10
+    #search(group,groupsize,histostart,histoend,"Euclid")
     #search(group,groupsize,histostart,histoend,"Correlation")
     #search(group,groupsize,histostart,histoend,"ChiSquare")
-    #search(group,groupsize,histostart,histoend,"Bhattach")
+    search(group,groupsize,histostart,histoend,"Bhattach")
