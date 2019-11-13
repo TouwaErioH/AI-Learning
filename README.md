@@ -38,7 +38,9 @@ ALS2文件夹包含测试代码，用于选择合适的参数：
 
 ## Histogram retrieval
 
+## using sift, lowes's ratio, RANSAC and opencv2 to stitch img
+## surf hessian weighted
+
 # Voice
 
 
-## using sift, lowes's ratio, RANSAC and opencv2 to stitch img
