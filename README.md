@@ -38,6 +38,8 @@ ALS2文件夹包含测试代码，用于选择合适的参数：
 
 ### Histogram retrieval
 
+计算直方图时可以优化，方法为分区域，或者采用权重，越靠近中间权重越高。
+
 ### panorma stitch
 using sift, lowes's ratio, RANSAC and opencv2 to stitch img
 
