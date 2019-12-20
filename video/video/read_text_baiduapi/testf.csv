@@ -1,0 +1,56 @@
+year,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent,language,percent
+1965,Fortran ,54.84,COBOL ,12.78,ALGOL ,10.06,Assembler ,5.20,APL ,3.10,BASIC ,2.24,Lisp ,1.44
+1966,Fortran ,46.29,COBOL ,11.01,ALGOL ,8.99,Assembler ,4.66,APL ,4.54,BASIC ,2.42,Lisp ,1.33
+1967,Fortran ,35.58,COBOL ,9.16,ALGOL ,7.38,APL ,5.33,Assembler ,4.38,BASIC ,3.20,Lisp ,1.62
+1968,Fortran ,26.96,COBOL ,7.41,ALGOL ,6.12,APL ,4.70,Assembler ,4.51,BASIC ,3.79,Lisp ,2.02
+1969,Fortran ,24.94,COBOL ,6.49,ALGOL ,5.09,Assembler ,4.77,APL ,4.22,BASIC ,3.77,Lisp ,2.77
+1970,Fortran ,24.27,COBOL ,7.06,Assembler ,4.95,BASIC ,4.56,ALGOL ,4.41,APL ,4.05,Lisp ,3.85,Pascal ,1.26
+1971,Fortran ,24.72,COBOL ,7.21,BASIC ,5.32,Assembler ,4.76,Lisp ,4.53,ALGOL ,4.13,APL ,3.58,Pascal ,1.88
+1972,Fortran ,24.56,COBOL ,8.71,BASIC ,5.54,Lisp ,5.35,Assembler ,4.17,ALGOL ,4.15,APL ,3.73,Pascal ,3.11
+1973,Fortran ,24.29,COBOL ,10.22,Lisp ,6.31,BASIC ,5.66,ALGOL ,4.65,Pascal ,4.17,APL ,3.89,Assembler ,3.70
+1974,Fortran ,24.81,COBOL ,11.70,Lisp ,6.71,BASIC ,5.85,Pascal ,5.60,ALGOL ,5.08,APL ,4.54,Assembler ,3.96
+1975,Fortran ,25.36,COBOL ,12.69,Pascal ,7.45,Lisp ,6.93,BASIC ,5.77,ALGOL ,5.05,Assembler ,4.57,APL ,4.51,C ,2.73
+1976,Fortran ,24.75,COBOL ,12.11,Pascal ,10.30,Lisp ,7.19,BASIC ,6.66,Assembler ,4.87,APL ,4.54,C ,4.40,ALGOL ,4.38
+1977,Fortran ,24.13,Pascal ,14.01,COBOL ,12.46,BASIC ,8.30,Lisp ,8.00,C ,5.51,Assembler ,4.85,APL ,4.77,ALGOL ,3.73
+1978,Fortran ,24.73,Pascal ,16.71,COBOL ,11.63,BASIC ,11.00,Lisp ,8.49,C ,6.75,Assembler ,4.53,APL ,3.79,ALGOL ,2.91
+1979,Fortran ,24.28,Pascal ,23.22,BASIC ,14.87,COBOL ,12.03,Lisp ,9.18,C ,8.73,Assembler ,5.20,APL ,3.96,ALGOL ,2.55
+1980,Pascal ,27.60,Fortran ,23.26,BASIC ,18.23,COBOL ,12.83,C ,12.32,Ada ,11.27,Lisp ,11.14,Assembler ,7.60,APL ,4.60,ALGOL ,2.31,C ++,1.74
+1981,Pascal ,31.27,Fortran ,22.28,BASIC ,20.82,C ,16.87,Ada ,16.06,Lisp ,12.89,COBOL ,12.88,Assembler ,9.89,APL ,4.93,C ++,3.44,ALGOL ,1.65
+1982,Pascal ,34.84,C ,21.91,Fortran ,21.56,BASIC ,21.34,Ada ,20.21,Lisp ,16.44,COBOL ,12.09,Assembler ,11.87,APL ,5.37,C ++,5.34,ALGOL ,1.54
+1983,Pascal ,35.48,C ,28.88,Ada ,25.15,Lisp ,21.66,Fortran ,21.11,BASIC ,19.61,Assembler ,12.70,COBOL ,10.49,C ++,7.22,APL ,5.13,ALGOL ,1.03
+1984,Pascal ,36.35,C ,34.99,Ada ,31.04,Lisp ,22.67,Fortran ,20.50,BASIC ,17.00,Assembler ,11.53,C ++,8.75,COBOL ,8.63,APL ,4.38,ALGOL ,0.65
+1985,Ada ,39.86,C ,38.99,Pascal ,35.99,Lisp ,23.67,Fortran ,19.35,BASIC ,13.44,Assembler ,10.28,C ++,9.75,COBOL ,8.04,APL ,4.11,ALGOL ,0.46
+1986,C ,44.98,Ada ,43.41,Pascal ,35.63,Lisp ,24.02,Fortran ,18.76,C ++,11.24,BASIC ,10.46,Assembler ,9.64,COBOL ,8.06,APL ,3.60,ALGOL ,0.24
+1987,C ,49.09,Ada ,47.05,Pascal ,33.09,Lisp ,20.83,Fortran ,17.92,C ++,12.27,BASIC ,8.46,Assembler ,8.32,COBOL ,8.21,APL ,2.98,ALGOL ,0.17
+1988,C ,51.42,Ada ,45.62,Pascal ,29.50,Lisp ,18.96,Fortran ,16.99,C ++,13.27,Assembler ,7.98,COBOL ,7.82,BASIC ,7.66,APL ,2.59,ALGOL ,0.11
+1989,C ,53.32,Ada ,38.12,Pascal ,26.70,Lisp ,16.33,C ++,15.29,Fortran ,14.05,BASIC ,7.79,Assembler ,7.34,COBOL ,6.41,APL ,2.14,ALGOL ,0.08
+1990,C ,58.24,Ada ,32.73,Pascal ,22.70,C ++,17.06,Fortran ,13.44,Lisp ,12.86,BASIC ,7.81,Assembler ,6.65,COBOL ,5.04,Visual Basic ,2.40,APL ,2.06
+1991,C ,66.47,Ada ,24.19,C ++,19.12,Pascal ,18.34,Fortran ,13.16,Lisp ,10.41,BASIC ,8.12,Assembler ,6.44,COBOL ,3.83,Visual Basic ,3.79,APL ,1.90
+1992,C ,71.48,C ++,20.37,Ada ,17.15,Pascal ,15.25,Fortran ,12.52,Lisp ,8.87,BASIC ,8.00,Assembler ,5.70,Visual Basic ,5.02,COBOL ,3.32,Perl ,2.18
+1993,C ,71.62,C ++,20.41,Ada ,12.19,Fortran ,11.90,Pascal ,11.35,BASIC ,7.97,Lisp ,6.71,Visual Basic ,6.30,Assembler ,5.85,COBOL ,3.44,Perl ,3.03
+1994,C ,71.20,C ++,20.30,Fortran ,10.18,Pascal ,8.92,BASIC ,7.78,Ada ,7.76,Visual Basic ,7.53,Assembler ,5.76,Lisp ,4.87,Perl ,4.76,COBOL ,3.68
+1995,C ,65.49,C ++,18.87,Visual Basic ,8.81,Fortran ,8.40,BASIC ,7.64,Pascal ,7.36,JavaScript ,7.10,Perl ,7.08,Java ,5.85,Assembler ,5.67,Ada ,4.88
+1996,C ,59.37,C ++,17.71,Java ,10.46,JavaScript ,10.22,Visual Basic ,9.77,Perl ,9.13,BASIC ,7.43,Fortran ,6.96,Pascal ,6.15,Assembler ,5.91,Delphi ,5.47
+1997,C ,51.47,C ++,16.60,Java ,14.33,JavaScript ,13.06,Perl ,10.83,Visual Basic ,10.38,BASIC ,6.75,Delphi ,6.10,Pascal ,5.59,Assembler ,5.40,Fortran ,5.33
+1998,C ,47.19,Java ,18.06,JavaScript ,15.82,C ++,14.90,Perl ,11.37,Visual Basic ,10.66,PHP ,7.13,Delphi ,6.23,BASIC ,5.85,Pascal ,4.75,Assembler ,4.63
+1999,C ,39.61,Java ,21.69,JavaScript ,18.23,C ++,13.75,Perl ,10.88,Visual Basic ,10.57,PHP ,10.39,Delphi ,5.79,BASIC ,4.59,Pascal ,4.22,C #,3.71
+2000,C ,30.92,Java ,25.65,JavaScript ,20.41,PHP ,14.21,C ++,12.76,Visual Basic ,10.41,Perl ,10.13,Delphi ,5.17,C #,4.72,Pascal ,3.83,BASIC ,3.09
+2001,Java ,29.48,C ,24.07,JavaScript ,22.00,PHP ,17.81,C ++,11.83,Visual Basic ,9.94,Perl ,9.26,C #,5.64,Delphi ,4.50,Pascal ,3.55,Python ,3.19
+2002,Java ,32.31,JavaScript ,23.07,PHP ,20.65,C ,18.99,C ++,11.17,Visual Basic ,9.21,Perl ,8.32,C #,6.55,Delphi ,3.84,Python ,3.67,Pascal ,3.32
+2003,Java ,34.30,JavaScript ,23.59,PHP ,22.51,C ,15.24,C ++,11.37,Visual Basic ,8.21,C #,7.35,Perl ,7.34,Python ,4.19,Delphi ,3.25,Pascal ,3.06
+2004,Java ,34.76,JavaScript ,23.45,PHP ,23.09,C ,13.24,C ++,11.43,C #,8.08,Visual Basic ,7.24,Perl ,6.42,Python ,4.88,Pascal ,2.88,Delphi ,2.86
+2005,Java ,34.32,JavaScript ,23.15,PHP ,23.04,C ,12.22,C ++,11.69,C #,8.40,Visual Basic ,6.59,Python ,5.77,Perl ,5.62,Ruby ,2.96,Matlab ,2.88
+2006,Java ,34.08,PHP ,22.44,JavaScript ,22.33,C ,12.14,C ++,11.95,C #,8.28,Python ,6.53,Visual Basic ,6.20,Perl ,4.87,Ruby ,3.49,Matlab ,3.16
+2007,Java ,33.55,JavaScript ,21.48,PHP ,21.42,C ,12.68,C ++,12.24,C #,7.96,Python ,7.30,Visual Basic ,5.94,Perl ,4.17,Ruby ,3.96,Matlab ,3.39
+2008,Java ,32.93,JavaScript ,20.71,PHP ,20.05,C ,12.59,C ++,12.57,C #,8.16,Python ,8.10,Visual Basic ,5.53,Ruby ,4.07,Perl ,3.56,Matlab ,3.54
+2009,Java ,32.45,JavaScript ,20.32,PHP ,18.61,C ++,12.26,C ,11.55,Python ,8.99,C #,8.97,Visual Basic ,4.92,Objective C ,4.16,Ruby ,4.10,Matlab ,3.57
+2010,Java ,31.70,JavaScript ,20.49,PHP ,17.19,C ++,11.31,C ,10.23,Python ,10.13,C #,9.92,Objective C ,6.11,Visual Basic ,4.20,Ruby ,4.16,Matlab ,3.51
+2011,Java ,30.93,JavaScript ,20.69,PHP ,15.85,Python ,11.43,C #,10.93,C ++,9.88,C ,8.53,Objective C ,7.46,Ruby ,4.17,Matlab ,3.46,Visual Basic ,3.45
+2012,Java ,30.14,JavaScript ,21.07,PHP ,14.61,Python ,12.28,C #,11.11,C ++,9.25,Objective C ,7.94,C ,7.86,Ruby ,4.05,Matlab ,3.36,R ,3.04
+2013,Java ,29.32,JavaScript ,21.40,PHP ,13.50,Python ,12.81,C #,10.77,C ++,8.98,Objective C ,7.69,C ,7.64,Ruby ,3.89,Swift ,3.59,R ,3.49
+2014,Java ,27.78,JavaScript ,21.89,Python ,13.77,PHP ,11.67,C #,10.06,C ++,8.41,C ,7.14,Objective C ,6.61,Swift ,4.49,R ,4.12,Ruby ,3.55
+2015,Java ,26.05,JavaScript ,22.44,Python ,14.97,PHP ,10.11,C #,9.45,C ++,7.83,C ,6.67,Objective C ,5.59,Swift ,4.51,R ,4.41,Ruby ,3.22
+2016,Java ,24.85,JavaScript ,22.88,Python ,17.54,C #,8.99,PHP ,8.99,C ++,7.37,C ,6.17,Objective C ,4.73,R ,4.59,Swift ,4.30,Ruby ,2.99
+2017,Java ,24.05,JavaScript ,23.00,Python ,20.54,C #,8.75,PHP ,8.18,C ++,7.03,C ,5.95,R ,4.55,Objective C ,4.11,Swift ,3.91,Ruby ,2.82
+2018,Python ,23.21,JavaScript ,23.07,Java ,22.87,C #,8.52,PHP ,7.48,C ++,6.81,C ,5.54,R ,4.43,Swift ,3.74,Objective C ,3.63,Ruby ,2.71
+2019,Python ,24.27,JavaScript ,23.18,Java ,22.39,C #,8.41,PHP ,7.19,C ++,6.62,C ,5.35,R ,4.36,Swift ,3.76,Objective C ,3.47,Kotlin ,2.64
