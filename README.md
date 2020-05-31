@@ -42,5 +42,5 @@ surf hessian weighted
 
 # Video
 
-### 数据可视化视频还原
+### Restore data visualization video to data
 
