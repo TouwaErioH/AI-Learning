@@ -2,24 +2,24 @@
 Just for fun  : )
 
 # Classifier
+### pro1
+Classification of attack types in a local power grid
 
 # NLP
 
 # Recommend
 
-## Recommendation system data set
+### movie-recommend-1
+
+data set
 
 movielens： http://files.grouplens.org/datasets/movielens/
 
-## Lib
+Lib:sklearn,spark,tensorflow...
 
-sklearn,spark,tensorflow...
+algorithm:SVD,NMF,ALS
 
-## algorithm
-
-SVD,NMF,ALS
-
-## recommend/ALS
+recommend/ALS:
 
 ALS推荐文件夹包含利用spark生成模型，推荐电影的代码；生成的模型;数据集(ml-100k)
 
@@ -42,4 +42,5 @@ surf hessian weighted
 
 # Video
 
+### 数据可视化视频还原
 
