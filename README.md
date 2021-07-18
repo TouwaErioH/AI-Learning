@@ -2,8 +2,7 @@
 Just for fun  : )
 
 # Classifier
-### pro1
-Classification of attack types in a local power grid
+
 
 # NLP
 
